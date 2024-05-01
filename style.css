@@ -1,0 +1,130 @@
+*, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(150deg, #8287A4, #F65F15);
+    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbackground%2F&psig=AOvVaw3_Xon7ue4E-kqUuJBwMVIh&ust=1714682712500000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLCy5JOp7YUDFQAAAAAdAAAAABAE);
+    background-size:cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+}
+
+.carousel {
+    max-width: 1440px;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel:hover .btn {
+    opacity: 1;
+}
+
+.slide {
+    width: 100%;
+    max-width: 400px;
+    height: 550px;
+    position: absolute;
+    transition: all 0.3s;
+    margin-top: 50px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide_Text {
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    background-color: rgb(185, 185, 185);
+}
+
+.text1 {
+    background-color: #000;
+}
+.text2 {
+    background-color: #F85E0F;
+}
+.text3 {
+    background-color: #a19e99;
+}
+.text4 {
+    background-color: #63BECE;
+}
+.text5 {
+    background-color: #FAA33D;
+}
+.text6 {
+    background-color: #873F4D;
+}
+
+.btn {
+    z-index: 10;
+    outline: none;
+    border: none;
+    width: 5rem;
+    color: #fff;
+    background: none;
+    position: absolute;
+    font-size: 3rem;
+    cursor: pointer;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#prev {
+    left: 4px;
+    top: 230px;
+}
+#next {
+    right: 4px;
+    top: 230px;
+}
+
+
+@media (max-width: 475px) {
+    .carousel {
+        width: 90%;
+        height: 100vh;
+        margin-top: 10vh;
+    }
+
+    .slide {
+        width: 100%;
+        max-width: 500px;
+        height: 600px;
+        position: absolute;
+        transition: all 0.3s;
+}
+}
+@media (max-width: 375px) {
+    .carousel {
+        width: 100%;
+        height: 100vh;
+        margin-top: 5vh;
+    }
+
+    .slide {
+        width: 100%;
+        max-width: 300px;
+        height: 500px;
+        margin-left: 30px;
+        position: absolute;
+        transition: all 0.3s;
+}
+}
